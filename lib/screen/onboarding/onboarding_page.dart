@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foody_health_app/screen/home/nav_page.dart';
 import 'package:foody_health_app/theme/theme.dart';
 import 'package:foody_health_app/widget/button/button_widget.dart';
 import 'package:foody_health_app/widget/image_costum/image_costum_widget.dart';
@@ -39,7 +40,10 @@ class OnboardingPage extends StatelessWidget {
                 const SizedBox(height: 24),
                 ButtonCostumWidget(
                   bacgkroundColor: blackColor,
-                  onPress: () {},
+                  onPress: () => Navigator.pushReplacementNamed(
+                    context,
+                    NavigationBarPage.routeName,
+                  ),
                   widget: Text(
                     'Login',
                     style: primaryTextStyle.copyWith(
@@ -54,6 +58,7 @@ class OnboardingPage extends StatelessWidget {
                   style: primaryTextStyle.copyWith(
                     color: Colors.white,
                     fontWeight: semiBold,
+                    fontSize: 16,
                   ),
                 ),
               ],
@@ -81,6 +86,7 @@ class OnboardingPage extends StatelessWidget {
                 style: primaryTextStyle.copyWith(
                   color: Colors.white,
                   fontWeight: semiBold,
+                  fontSize: 16,
                 ),
               ),
             ),
