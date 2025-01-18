@@ -1,5 +1,6 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:foody_health_app/screen/home/home_page.dart';
 import 'package:foody_health_app/theme/theme.dart';
 import 'package:foody_health_app/widget/scaffold/scaffold_widget.dart';
 
@@ -23,7 +24,7 @@ class _NavigationBarPageState extends State<NavigationBarPage> {
   ];
 
   final List<Widget> _pages = [
-    const Center(child: Text('Home Page')),
+    const HomePage(),
     const Center(child: Text('Search Page')),
     const Center(child: Text('Notifikasi Page')),
     const Center(child: Text('Profile Page')),
@@ -41,8 +42,7 @@ class _NavigationBarPageState extends State<NavigationBarPage> {
         gapLocation: GapLocation.center,
         notchSmoothness: NotchSmoothness.softEdge,
         inactiveColor: Colors.grey,
-        activeColor: Colors.blue,
-        splashColor: Colors.blueAccent,
+        activeColor: primaryColor,
         onTap: (index) {
           setState(() {
             _activeIndex = index;
