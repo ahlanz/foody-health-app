@@ -1,6 +1,7 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:foody_health_app/screen/home/home_page.dart';
+import 'package:foody_health_app/screen/search/search_page.dart';
 import 'package:foody_health_app/theme/theme.dart';
 import 'package:foody_health_app/widget/image_costum/image_costum_widget.dart';
 import 'package:foody_health_app/widget/scaffold/scaffold_widget.dart';
@@ -26,7 +27,7 @@ class _NavigationBarPageState extends State<NavigationBarPage> {
 
   final List<Widget> _pages = [
     const HomePage(),
-    const Center(child: Text('Search Page')),
+    const SearchPage(),
     const Center(child: Text('Notifikasi Page')),
     const Center(child: Text('Profile Page')),
   ];

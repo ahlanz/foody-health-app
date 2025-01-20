@@ -9,6 +9,9 @@ class ScaffoldCostum extends StatelessWidget {
   final Widget? floatingActionButton;
   final Widget? bottomNavigationBar;
   final FloatingActionButtonLocation? floatingActionButtonLocation;
+  final bool isAutoImply;
+  final List<Widget>? action;
+  final Widget? leading;
 
   const ScaffoldCostum({
     super.key,
@@ -19,6 +22,9 @@ class ScaffoldCostum extends StatelessWidget {
     this.bottomNavigationBar,
     this.floatingActionButton,
     this.floatingActionButtonLocation,
+    this.isAutoImply = false,
+    this.action,
+    this.leading,
   });
 
   @override
@@ -29,8 +35,14 @@ class ScaffoldCostum extends StatelessWidget {
         floatingActionButton: floatingActionButton,
         bottomNavigationBar: bottomNavigationBar,
         backgroundColor: backgorundColor,
-        appBar:
-            isAppBar == true ? AppBarCostum(title: titleAppBar ?? '') : null,
+        appBar: isAppBar == true
+            ? AppBarCostum(
+                title: titleAppBar ?? '',
+                automaticallyImplyLeading: isAutoImply,
+                actions: action,
+                leading: leading,
+              )
+            : null,
         body: SafeArea(
           child: body,
         ),

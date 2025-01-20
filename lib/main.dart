@@ -15,6 +15,9 @@ class FoodyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         primaryColor: primaryColor,
+        appBarTheme: AppBarTheme(
+          backgroundColor: bgColor,
+        ),
         scaffoldBackgroundColor: bgColor,
         useMaterial3: true,
         cardColor: Colors.white,
